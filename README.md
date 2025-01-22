@@ -9,6 +9,8 @@ Design an All-Digital Phase-Locked Loop (ADPLL) circuit through a common archite
 - [Specification](#specification)
 - [Bang-Bang PFD](#bang-bang-pfd)
 - [DCO](#dco)
+- [CONTROLLER](#controller)
+- [Frequency Divider](#frequency-divider)
 
 
   
@@ -38,3 +40,9 @@ The DCO is composed of a tri-state inverter matrix to construct a delay cell, as
 <p align="center">
   <img src="https://github.com/RexJian/ADPLL/blob/main/img/dco.png" width="800" height="450" alt="Architecture">
 </p>
+
+## CONTROLLER
+A phase clock, derived from the PFD's up and down outputs, is supplied to the circuit's test function. When P_UP=1'b0 is detected on the falling edge of the phase clock, the PLL controller increases the DCO control code. In the circuit, I designed a loop filter to decrease clock jitter. When the PLL is locked, the baseline frequency is saved to the anchor register. If four consecutive increments of the DCO control code occur, then the anchor register is increased once.
+
+## Frequency Divider
+This is a counter-based frequency divider that generates a frequency which is a multiple of a reference frequency.
