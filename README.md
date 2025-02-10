@@ -2,7 +2,7 @@
 Design an All-Digital Phase-Locked Loop (ADPLL) circuit through a common architecture, as shown in the following figure. First, the Phase and Frequency Detector checks the phase and frequency difference between the reference clock and the divided clock. Then, it delivers the lead or lag signal to the controller, which adjusts the DCO control code based on the input conditions. Once the Digital-Controlled Oscillator (DCO) receives the control code, it oscillates at the corresponding frequency. Finally, the oscillated signal is sent to the frequency divider, which divides the signal according to the input value M. Once the ADPLL is locked, it transitions into maintenance mode and continues to track the phase and frequency of the reference clock.
 
 <p align="center">
-  <img src="https://github.com/RexJian/ADPLL/blob/main/img/architecture.png" width="800" height="300" alt="Architecture">
+  <img src="https://github.com/RexJian/ADPLL/blob/main/img/architecture.png" width="800" height="250" alt="Architecture">
 </p> 
 
 ## Table of Content
